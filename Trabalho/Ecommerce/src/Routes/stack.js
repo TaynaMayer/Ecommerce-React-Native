@@ -5,12 +5,6 @@ const { Navigator } = createNativeStackNavigator();
 
 export function StackRoutes() {
     return (
-        <Navigator
-            screenOptions={{
-                headerShown: false,
-            }}>
-
-                
-        </Navigator>
+        
     )
 }
