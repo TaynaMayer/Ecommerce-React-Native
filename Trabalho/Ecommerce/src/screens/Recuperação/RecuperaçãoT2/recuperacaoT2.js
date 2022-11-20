@@ -14,7 +14,7 @@ const RecuperaçãoT2 = () => {
           style={{
             width: 50, height: 50
           }} />
-        <Text style={{ marginBottom: 40 }}>MULTI TECH</Text>
+        <Text style={{ marginBottom: 70, marginTop: 24 }}>MULTI TECH</Text>
         <InputForm placeholder="Senha" placeholderTextColor="#616161"
           style={{ textAlign: "center" }} />
         <InputForm placeholder="Confirme sua senha" placeholderTextColor="#616161"
