@@ -3,6 +3,7 @@ import { Gradient } from "../../components/index";
 import { Container } from "../../components/Global";
 import { useNavigation } from "@react-navigation/native";
 import Header from "../../components/header/header";
+import { StatusBar } from "expo-status-bar";
 
 export default function Login() {
     const navigation = useNavigation();
@@ -21,6 +22,7 @@ export default function Login() {
             <Text style={{color: 'black'}}>Cadastro</Text>
         </TouchableOpacity>
         </Container>
+        <StatusBar style="auto" />
         </>
     )
 }
