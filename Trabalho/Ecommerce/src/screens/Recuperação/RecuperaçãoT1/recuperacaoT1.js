@@ -14,9 +14,8 @@ const RecuperaçãoT1 = () => {
           style={{
             width: 50, height: 50
           }} />
-        <Text style={{ marginBottom: 40 }}>MULTI TECH</Text>
-        <InputForm placeholder="Digite seu e-mail" placeholderTextColor="#616161"
-          style={{ textAlign: "center" }} />       
+        <Text style={{ marginBottom: 70, marginTop: 24 }}>MULTI TECH</Text>
+        <InputForm placeholder="Digite seu e-mail" placeholderTextColor="#616161" />       
         <Button onPress={() =>
           navigation.navigate("RecuperaçãoT2")
         }>
