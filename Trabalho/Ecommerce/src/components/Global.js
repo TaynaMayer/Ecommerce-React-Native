@@ -16,8 +16,11 @@ export const Title = styled.Text`
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
+    align-items: center;
+    justify-content: center;
     line-height: 39px;
     text-align: center;
+    margin: 0 auto;
 
     color: #690A0A;
 `
