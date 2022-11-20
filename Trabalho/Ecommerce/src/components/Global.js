@@ -37,9 +37,7 @@ export const Button = styled.TouchableOpacity`
 
     background: #690A0A;
     border-radius: 5px;
-    padding: 9px 80px;    
-    color: #fff;
-    font-family: 'DM Sans';
+    padding: 9px 80px;        
     font-size: 12px;
     
 `;
