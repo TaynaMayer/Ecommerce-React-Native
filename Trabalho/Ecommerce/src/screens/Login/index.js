@@ -5,7 +5,6 @@ export default function Login() {
 
     return (
         <View>
-            <Gradient />
             <Text>MultiTech</Text>
             <TouchableOpacity>
                 <Text>Entrar</Text>
