@@ -1,20 +1,21 @@
 import React from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-
+import { Title } from '../Global';
+import Ionicons from "@expo/vector-icons/Ionicons"
+import { ContHeader } from './styles';
 
 // import { Container } from './styles';
 
-const Header = ({ props }) => {
+export default function Header( props ){
 
   return (
-    <View>
-        <Text></Text>
-
+    <ContHeader>
+        <Ionicons  name="chevron-back-outline" size={24} color="#690A0A"/>
+        <Title>{props.name}</Title>
 
         
-    </View>
+    </ContHeader>
   );
 }
 
-export default Header;
