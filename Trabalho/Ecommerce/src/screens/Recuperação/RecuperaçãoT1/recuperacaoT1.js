@@ -1,24 +1,30 @@
 import React from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Image, Text, } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
-import { Container } from '../../../components/Global';
-
-// import { Container } from './styles';
+import { Container, InputForm, Button } from '../../../components/Global';
+import Header from '../../../components/header/header';
 
 const RecuperaçãoT1 = () => {
   const navigation = useNavigation();
   return (
-
-    <Container>
-    <Text>RecuperaçãoT1</Text>
-
-    <TouchableOpacity onPress={() => 
-            navigation.navigate("RecuperaçãoT2")
+    <>
+      <Header name="Recuperação de Senha" />
+      <Container>
+      <Image source={require("../../../../assets/logo.png")}
+          style={{
+            width: 50, height: 50
+          }} />
+        <Text style={{ marginBottom: 40 }}>MULTI TECH</Text>
+        <InputForm placeholder="Digite seu e-mail" placeholderTextColor="#616161"
+          style={{ textAlign: "center" }} />       
+        <Button onPress={() =>
+          navigation.navigate("RecuperaçãoT2")
         }>
-            <Text style={{color: 'black'}}>Recuperação t2</Text>
-        </TouchableOpacity>
+          <Text style={{ color: "white" }}>Próximo</Text>
+        </Button>
 
-    </Container>
+      </Container>
+    </>
   );
 }
 
