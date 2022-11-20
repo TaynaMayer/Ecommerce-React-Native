@@ -15,13 +15,12 @@ export const Title = styled.Text`
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
     line-height: 39px;
     text-align: center;
-    margin: 0 auto;
-
+    margin: 0 auto;  
     color: #690A0A;
 `
 
