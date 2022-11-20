@@ -8,10 +8,10 @@ import { ContHeader } from './styles';
 // import { Container } from './styles';
 
 export default function Header( props ){
-
+  const navigation = useNavigation();
   return (
     <ContHeader>
-        <Ionicons  name="chevron-back-outline" size={24} color="#690A0A"/>
+        <Ionicons onPress={() =>  navigation.goBack()}  name="chevron-back-outline" size={24} color="#690A0A"/>
         <Title>{props.name}</Title>
 
         
