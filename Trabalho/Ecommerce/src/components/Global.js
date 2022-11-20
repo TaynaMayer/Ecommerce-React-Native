@@ -15,23 +15,22 @@ export const Title = styled.Text`
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
     line-height: 39px;
     text-align: center;
-    margin: 0 auto;
-
+    margin: 0 auto;  
     color: #690A0A;
 `
 
 export const InputForm = styled.TextInput`
-
+    text-align: center;
     background: #F5F5F5;
     border: 2px solid #FAFAFA;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;  
-    width: 100% ;
+    border-radius: 5px;
+    width: 100%;
     margin-bottom: 23px;
 
 `;
