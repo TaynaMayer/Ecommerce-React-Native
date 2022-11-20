@@ -25,12 +25,12 @@ export const Title = styled.Text`
 `
 
 export const InputForm = styled.TextInput`
-
+    text-align: center;
     background: #F5F5F5;
     border: 2px solid #FAFAFA;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;  
-    width: 100% ;
+    border-radius: 5px;
+    width: 100%;
     margin-bottom: 23px;
 
 `;
