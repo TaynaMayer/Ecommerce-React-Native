@@ -2,9 +2,10 @@ import { Text, Image, Platform, TouchableOpacity } from "react-native";
 import { Container, InputForm, Button } from "../../components/Global";
 import Header from '../../components/header/header';
 import { Api } from "../../service/api"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import * as ImagePicker from "expo-image-picker";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Cadastro() {
 
@@ -37,7 +38,7 @@ export default function Cadastro() {
         console.log(result)
         if(!result.canceled) {
             setImage(result.assets.find((foto) => {
-                return foto.uri.substring(0, 100)
+                return foto.uri
             }))
         }
     }
@@ -60,9 +61,8 @@ export default function Cadastro() {
             console.log(err)
            });
     };
-
     return (
-        <>
+        <SafeAreaView>
         <Header name="Cadastro de usuários"/>
         <Container>
             <Image source={require("../../../assets/logo.png")}
@@ -75,16 +75,12 @@ export default function Cadastro() {
             <InputForm value={cpf} onChangeText={(data) => setCpf(data) } placeholder= "CPF" placeholderTextColor= "#616161" />
             <InputForm value={senha} onChangeText={(data) => setSenha(data) } placeholder= "Senha" placeholderTextColor= "#616161" />
             <InputForm value={nascimento} onChangeText={(data) => setNascimento(data) } placeholder= "Data de nascimento" placeholderTextColor= "#616161" />
-            <TouchableOpacity onPress={PickImage}>
-                <Text>Clique Aqui</Text>
-            </TouchableOpacity>
-
-            {image && <Image source={{uri:image}} style={{width: 200, height: 200}}/>}
+            <InputForm value={image} onChangeText={(data) => setImage(data) } placeholder= "Insira a url da sua imagem" placeholderTextColor= "#616161" />
             
             <Button onPress={() => addPost()}>
              <Text style= {{color: "white"}}>Cadastrar</Text>
              </Button> 
         </Container>
-        </>
+        </SafeAreaView>
     )
 }
