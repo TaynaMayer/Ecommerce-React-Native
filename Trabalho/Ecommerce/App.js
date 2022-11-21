@@ -1,13 +1,12 @@
 import {Routes} from "./src/Routes";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { IdProvider } from "./src/context/IdContext";
 
 export default function App() {
   return (
-    
+
+    <IdProvider>
       <Routes />
-    
+    </IdProvider>
   );
 }
-
-
 

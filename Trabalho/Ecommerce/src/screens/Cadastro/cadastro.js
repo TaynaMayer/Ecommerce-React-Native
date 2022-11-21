@@ -19,16 +19,16 @@ export default function Cadastro() {
     const [senha, setSenha] = useState("")
     const [image, setImage] = useState("")
 
-    async () => {
+   /* async () => {
         if(Platform.OS !== "web") {
             const { status } = await ImagePicker.requestMediaLibraryPermissionsAsync();
             if(status != 'granted') {
                 alert("Sem permissão")
             }
         }
-    }
+    }*/
 
-    const PickImage = async() => {
+    /*const PickImage = async() => {
         let result = await ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.All,
             allowsEditing: true,
@@ -41,7 +41,7 @@ export default function Cadastro() {
                 return foto.uri
             }))
         }
-    }
+    }*/
 
     const addPost = () => {
         const data = {
