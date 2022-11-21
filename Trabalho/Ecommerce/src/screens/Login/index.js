@@ -48,8 +48,9 @@ export default function Login() {
           <Text style={{ color: "white" }}>Entrar</Text>
         </Button>
 
-        <Text></Text>
-
+        <Text onPress={() => navigation.navigate("RecuperaçãoT1")}>Esqueci minha senha</Text>
+        
+        <Text onPress={() => navigation.navigate("Cadastro")}>Ainda não sou cadastrado</Text>
        
         </Container>
         <StatusBar style="" />
