@@ -62,7 +62,7 @@ export default function Cadastro() {
            });
     };
     return (
-        <SafeAreaView>
+        <>
         <Header name="Cadastro de usuários"/>
         <Container>
             <Image source={require("../../../assets/logo.png")}
@@ -81,6 +81,6 @@ export default function Cadastro() {
              <Text style= {{color: "white"}}>Cadastrar</Text>
              </Button> 
         </Container>
-        </SafeAreaView>
+        </>
     )
 }
