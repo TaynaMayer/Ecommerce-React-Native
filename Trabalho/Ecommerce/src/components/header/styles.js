@@ -9,6 +9,6 @@ export const ContHeader = styled.View `
     width: 100%;
     padding: 15px;
     background-color: #ffffff;
-    
+    margin-top: 40px;   
 
 `

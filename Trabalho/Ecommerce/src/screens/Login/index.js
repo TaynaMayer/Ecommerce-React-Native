@@ -32,11 +32,9 @@ export default function Login() {
     console.log(validation)
 
     return (
-        <SafeAreaView>
+        <>
             <Header name="Entrar"/>
-        <Container>
-            
-
+        <Container>        
         <Image source={require("../../../assets/logo.png")}
           style={{
             width: 50, height: 50
@@ -55,6 +53,6 @@ export default function Login() {
        
         </Container>
         <StatusBar style="" />
-        </SafeAreaView>
+        </>
     )
 }
