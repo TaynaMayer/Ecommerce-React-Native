@@ -21,15 +21,14 @@ export default function Login() {
           
         Api.get(`usuario/login?login=${login}&senha=${senha}`)
            .then((res) => {
-            if(res !== "Login e/ou senha inválidos.") {
+              console.log(res)
+            if(res.data !== "Login e/ou senha inválidos.") {
                 setValidation(true)
             }
            }).catch((err) => {
             console.log(err)
            });
     };
-
-    console.log(validation)
 
     return (
         <>
@@ -44,7 +43,7 @@ export default function Login() {
           style={{ textAlign: "center" }} onChangeText={(data) => setLogin(data)} />
         <InputForm value={senha} placeholder="Senha" placeholderTextColor="#616161"
           style={{ textAlign: "center" }} onChangeText={(data) => setSenha(data)}/>
-        <Button onPress={() => logar()}>
+        <Button onPress={logar}>
           <Text style={{ color: "white" }}>Entrar</Text>
         </Button>
 
