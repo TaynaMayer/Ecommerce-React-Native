@@ -50,7 +50,9 @@ export default function Login() {
           <Text style={{ color: "white" }}>Entrar</Text>
         </Button>
 
-        <Button onPress={() => navigation.navigate("Cadastro")}>CADASTRO</Button>
+        <Text></Text>
+
+       
         </Container>
         <StatusBar style="" />
         </SafeAreaView>
