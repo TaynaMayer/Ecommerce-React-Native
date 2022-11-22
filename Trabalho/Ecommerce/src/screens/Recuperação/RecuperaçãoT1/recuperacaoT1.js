@@ -32,9 +32,9 @@ const RecuperaçãoT1 = () => {
         console.log(r.data)
       })
 
-    console.log(usuario.id)
     setId(usuario.id)
   }
+  console.log(usuario.find((u) => u.id))  
 
   return (
     <>
