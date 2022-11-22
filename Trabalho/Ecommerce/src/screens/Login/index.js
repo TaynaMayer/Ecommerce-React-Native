@@ -33,7 +33,7 @@ export default function Login() {
            });
         
            if (validation){  
-            console.log(navegando)
+            console.log("navegando")
             navigation.navigate("Home")            
            }
     };
