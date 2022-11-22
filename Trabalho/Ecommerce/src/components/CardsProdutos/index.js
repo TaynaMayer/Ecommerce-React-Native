@@ -11,15 +11,15 @@ export default function CardsProdutos(props) {
     return (
         
         <Card >
-            <Foto style={{width: 50, height: 50}} source={{ uri: props.foto }} />
+            <Foto style={{width: "100%", height: 60, marginBottom: 12}} source={{ uri: props.foto }} />
             <Title>
                 {props.title}
             </Title>
             <Price>
-                {props.price}
+                R$ {props.price}
             </Price>
-            <View>
-                <View>
+            <View style={{flexDirection: "row", width: "100%"}}>
+                <View style={{flexDirection: "row", marginRight: 10}}>
                     <Ionicons name="star-outline" size={10} color="#FFC120" />
                     <SubTitle>
                         48
@@ -28,12 +28,12 @@ export default function CardsProdutos(props) {
                 <SubTitle>
                     80 reviews
                 </SubTitle>
+            </View>
                 <Button onPress={() => navigation.navigate("DescricaoProduto")}>
-                    <Ionicons name="cart-outline" size={10} color= "#0C1A30" />
+                    <Ionicons name="cart-outline" size={16} color= "#0C1A30" />
                     <Text>Carrinho</Text>
 
                 </Button>
-            </View>
         </Card>
         
 
