@@ -23,12 +23,21 @@ export default function Login() {
            .then((res) => {
               console.log(res)
             if(res.data !== "Login e/ou senha inválidos.") {
-                setValidation(true)
+                setValidation(true)              
             }
+            else{
+              setValidation(false) 
+            }    
            }).catch((err) => {
             console.log(err)
            });
+        
+           if (validation){  
+            console.log(navegando)
+            navigation.navigate("Home")            
+           }
     };
+    console.log(validation)
 
     return (
         <>
