@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { View, FlatList, Text } from 'react-native';
 import { useEffect } from 'react';
 import { Api } from "../../service/api";
-import { BoxCards } from '../../components/CardsProdutos/styles';
 import CardsProdutos from '../../components/CardsProdutos';
 import { Container } from '../../components/Global';
-
+import HeaderProdutos from '../../components/headerProdutos/headerProduto';
+import { BoxCards } from './styles';
 
 const Home = () => {
 
@@ -24,12 +24,14 @@ const Home = () => {
 
   return (
 
-   
+   <Container>
+      <HeaderProdutos/>
 
-      <View style={{flexDirection: "row", flexWrap: "wrap", gap: 10, alignItems: "center", justifyContent: "center"}}>
-
-      {produto?.map((item) => <CardsProdutos key={item.id} title= {item.nome} price= {item.preco} foto= {item.foto}/>)}
-      </View>
+      <BoxCards>
+          {produto?.map((item) => <CardsProdutos key={item.id} title= {item.nome} price= {item.preco} foto= {item.foto}/>)}
+      </BoxCards>
+   </Container>
+      
     
       
     

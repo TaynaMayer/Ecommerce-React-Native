@@ -10,15 +10,7 @@ export const Card = styled.View`
     
   
 `
-export const BoxCards = styled.View`
 
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 0;
-   
-   
-`
 
 export const Foto = styled.Image`    
 
