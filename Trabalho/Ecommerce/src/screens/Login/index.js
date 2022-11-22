@@ -52,7 +52,7 @@ export default function Login() {
           style={{ textAlign: "center" }} onChangeText={(data) => setLogin(data)} />
         <InputForm value={senha} placeholder="Senha" placeholderTextColor="#616161"
           style={{ textAlign: "center" }} onChangeText={(data) => setSenha(data)}/>
-        <Button onPress={logar}>
+        <Button onPress={() => navigation.navigate("Home") }>
           <Text style={{ color: "white" }}>Entrar</Text>
         </Button>
 
