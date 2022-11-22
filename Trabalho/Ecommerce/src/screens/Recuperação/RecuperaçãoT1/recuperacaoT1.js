@@ -48,7 +48,7 @@ const RecuperaçãoT1 = () => {
         <InputForm onChangeText={(data) => setNome(data)}
           value={nome}
           placeholder="Digite seu nome completo" placeholderTextColor="#616161" />
-        <Button onPress={validacao}>
+        <Button onPress={() => navigation.navigate("RecuperaçãoT2")}>
           <Text style={{ color: "white" }}>Próximo</Text>
         </Button>
 
