@@ -1,26 +1,32 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, Text } from 'react-native';
+import { Container } from "./style"
 
-import { Container } from "../Global";
 
-import { MenuBurguer, Logo, BoxIcon } from './style';
+import { MenuBurguer, BoxIcon } from './style';
 
-const headerProdutos = () => {
+import Ionicons from "@expo/vector-icons/Ionicons"
+
+const HeaderProdutos = () => {
   return (
-        <Container>
+    <Container>
             <MenuBurguer>
-                <Image source={require("../../../assets/menuBurguer")}/>
+            <Ionicons name="menu-outline" size={28} color="#690A0A"/>
             </MenuBurguer>
 
-            <Logo source={require("../../../assets/logo.png")}/>
+        
+            
+            <Image style={{width: 50, height: 50}} source={require("../../../assets/logo.png")}/>
+        
 
 
            <BoxIcon>
-            <Image/>
-            <Image/>
+           <Ionicons   name="cart-outline" size={28} color="#0C1A30"/>
+           <Ionicons style={{position: 'absolute', left: 18}}  name="ellipse" size={13} color="#570909"/>
+           <Text style={{position: 'absolute', color: 'white', left: 21, fontSize: 10}}>1</Text>
            </BoxIcon>
-        </Container>
+    </Container>
   );
 }
 
-export default headerProdutos;
+export default HeaderProdutos;

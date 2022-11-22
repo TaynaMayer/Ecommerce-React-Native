@@ -2,21 +2,16 @@ import React, { useState } from 'react';
 import { View, FlatList, Text } from 'react-native';
 import { useEffect } from 'react';
 import { Api } from "../../service/api";
-import { Container } from '../../components/Global';
 import CardsProdutos from '../../components/CardsProdutos';
-import { useLinkProps } from '@react-navigation/native';
-
+import { Container } from '../../components/Global';
+import HeaderProdutos from '../../components/headerProdutos/headerProduto';
+import { BoxCards } from './styles';
 
 const Home = () => {
 
   const [produto, setProduto] = useState([])
 
-  const renderItem = ({ item }) => {
-      return (
-        <CardsProdutos title= {item.nome} price= {item.preco} foto= {item.foto}/>
-        
-      )
-  }
+
 
   useEffect(() => {
     Api
@@ -28,10 +23,18 @@ const Home = () => {
   }, []);
 
   return (
+
+   <Container>
+      <HeaderProdutos/>
+
+      <BoxCards>
+          {produto?.map((item) => <CardsProdutos key={item.id} title= {item.nome} price= {item.preco} foto= {item.foto}/>)}
+      </BoxCards>
+   </Container>
+      
     
-      <FlatList data={produto} keyExtractor={(p) => p.id}
-        renderItem={renderItem}
-      />
+      
+    
     
   )
 }
