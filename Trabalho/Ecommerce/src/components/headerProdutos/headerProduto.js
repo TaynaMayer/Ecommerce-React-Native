@@ -5,19 +5,20 @@ import { Container } from "../Global";
 
 import { MenuBurguer, Logo, BoxIcon } from './style';
 
+import Ionicons from "@expo/vector-icons/Ionicons"
+
 const headerProdutos = () => {
   return (
         <Container>
             <MenuBurguer>
-                <Image source={require("../../../assets/menuBurguer")}/>
+            <Ionicons name="menu-outline" size={24} color="#690A0A"/>
             </MenuBurguer>
 
             <Logo source={require("../../../assets/logo.png")}/>
 
 
            <BoxIcon>
-            <Image/>
-            <Image/>
+           <Ionicons   name="cart-outline" size={24} color="#690A0A"/>
            </BoxIcon>
         </Container>
   );

@@ -8,16 +8,15 @@ export const Card = styled.View`
     width: 157px;
     height: 231px;
     
-    
   
 `
-export const Container = styled.View`
+export const BoxCards = styled.View`
 
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     padding: 0;
-    justify-content: space-between;
+   
    
 `
 

@@ -1,13 +1,17 @@
 import { View, Text } from "react-native";
 import { Button, Card, Container, Foto, Price, SubTitle, Title } from "./styles";
 import Ionicons from "@expo/vector-icons/Ionicons"
-
+import { useNavigation } from "@react-navigation/native" 
 
 export default function CardsProdutos(props) {
+    
+    const navigation = useNavigation()
+
+
     return (
-        <Container>
-        <Card>
-            <Foto source={{ uri: props.foto }} />
+        
+        <Card >
+            <Foto style={{width: 50, height: 50}} source={{ uri: props.foto }} />
             <Title>
                 {props.title}
             </Title>
@@ -16,7 +20,7 @@ export default function CardsProdutos(props) {
             </Price>
             <View>
                 <View>
-                    <Ionicons name="star-outline" size={10} color="FFC120" />
+                    <Ionicons name="star-outline" size={10} color="#FFC120" />
                     <SubTitle>
                         48
                     </SubTitle>
@@ -24,14 +28,14 @@ export default function CardsProdutos(props) {
                 <SubTitle>
                     80 reviews
                 </SubTitle>
-                <Button>
-                    <Ionicons name="cart-outline" size={10} color= "0C1A30" />
+                <Button onPress={() => navigation.navigate("DescricaoProduto")}>
+                    <Ionicons name="cart-outline" size={10} color= "#0C1A30" />
                     <Text>Carrinho</Text>
 
                 </Button>
             </View>
         </Card>
-        </Container>
+        
 
 
     )
