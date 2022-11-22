@@ -11,6 +11,17 @@ export const Container = styled.View`
 
 `
 
+
+export const ContainerProdutos = styled.View`
+
+
+    flex: 1;
+    width: 100%;
+    padding: 40px 0;
+    align-items: center;
+    background-color: #ffffff;
+`
+
 export const Title = styled.Text`
 
     font-family: 'DM Sans';

@@ -2,18 +2,20 @@ import styled from "styled-components/native";
 
 export const Card = styled.View`
   
-    padding: 12px 13px;
+    padding: 12px 15px;
     background-color: #F5F5F5;
-    border-radius: 25px;  
-    width: 157px;
+    border-radius: 25px; 
+    width: 40%;
     height: 231px;
-    
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
   
 `
 
 
 export const Foto = styled.Image`    
 
+    
 
 `
 
@@ -24,6 +26,8 @@ export const Title = styled.Text`
     line-height: 18px;
     letter-spacing: 0.2px;
     color: #0C1A30;
+    text-align: left;
+    width: 100%;
 
 `
 
@@ -34,6 +38,9 @@ export const Price = styled.Text`
     line-height: 16px;
     letter-spacing: 0.2px;
     color: #570909;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 6px;
 
 `
 export const SubTitle = styled.Text`
@@ -52,5 +59,9 @@ export const Button = styled.TouchableOpacity`
     border: 2px solid #FAFAFA;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
-    padding: 5px 9px;
+    padding: 5px 10px;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    
 `
