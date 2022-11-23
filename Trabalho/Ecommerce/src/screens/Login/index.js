@@ -18,15 +18,18 @@ export default function Login() {
 
     const logar = () => {
         console.log("logando")
+       
           
         Api.get(`usuario/login?login=${login}&senha=${senha}`)
            .then((res) => {
-              console.log(res)
             if(res.data !== "Login e/ou senha inválidos.") {
-                setValidation(true)              
+                setValidation(true)
+                navigation.navigate("Home")  
+                console.log("logou")              
             }
             else{
-              setValidation(false) 
+              setValidation(false)
+              alert("errou") 
             }    
            }).catch((err) => {
             console.log(err)
@@ -34,10 +37,10 @@ export default function Login() {
         
            if (validation){  
             console.log("navegando")
-            navigation.navigate("Home")            
+                      
            }
     };
-    console.log(validation)
+    
 
     return (
         <>
@@ -52,7 +55,7 @@ export default function Login() {
           style={{ textAlign: "center" }} onChangeText={(data) => setLogin(data)} />
         <InputForm  secureTextEntry value={senha} placeholder="Senha" placeholderTextColor="#616161"
           style={{ textAlign: "center" }} onChangeText={(data) => setSenha(data)}/>
-        <Button onPress={() => navigation.navigate("Home") }>
+        <Button onPress={logar}>
           <Text style={{ color: "white" }}>Entrar</Text>
         </Button>
 
