@@ -2,11 +2,19 @@ import { View, Text } from "react-native";
 import { Button, Card, Container, Foto, Price, SubTitle, Title } from "./styles";
 import Ionicons from "@expo/vector-icons/Ionicons"
 import { useNavigation } from "@react-navigation/native" 
+import { IdContext } from "../../context/IdContext";
+import { useContext } from "react";
 
 export default function CardsProdutos(props) {
-    
+    const { setId } = useContext(IdContext)
     const navigation = useNavigation()
+    
+    function addItem(){
+        const itemId = id;
+        setId()
+        navigation.navigate("DescricaoProduto")
 
+    }
 
     return (
         
@@ -15,6 +23,7 @@ export default function CardsProdutos(props) {
             <Title>
                 {props.title}
             </Title>
+            <Title>{props.key}</Title>
             <Price>
                 R$ {props.price}
             </Price>
@@ -29,7 +38,8 @@ export default function CardsProdutos(props) {
                     80 reviews
                 </SubTitle>
             </View>
-                <Button onPress={() => navigation.navigate("DescricaoProduto")}>
+                <Button onPress={() => addItem()}
+>
                     <Ionicons name="cart-outline" size={16} color= "#0C1A30" />
                     <Text>Carrinho</Text>
 
