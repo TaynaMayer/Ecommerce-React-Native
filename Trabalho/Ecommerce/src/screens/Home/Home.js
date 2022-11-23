@@ -12,8 +12,6 @@ import { useContext } from 'react';
 const Home = () => {
 
   const [produto, setProduto] = useState([])
-  const {setId} = useContext(IdContext);
-
 
   useEffect(() => {
     Api
@@ -32,7 +30,7 @@ const Home = () => {
       <BoxCards>
           {produto?.map((item) => {
     
-            return <CardsProdutos key={item.id} title= {item.nome} price= {item.preco} foto= {item.foto} />
+            return <CardsProdutos key={item.id} item={item}  />
              })}
       </BoxCards>
    </ContainerProdutos>

@@ -73,7 +73,7 @@ export default function Cadastro() {
             <InputForm value={nome} onChangeText={(data) => setNome(data) } placeholder= "Nome" placeholderTextColor= "#616161" />
             <InputForm value={login} onChangeText={(data) => setLogin(data) } placeholder= "Login" placeholderTextColor= "#616161" />
             <InputForm value={cpf} onChangeText={(data) => setCpf(data) } placeholder= "CPF" placeholderTextColor= "#616161" />
-            <InputForm value={senha} onChangeText={(data) => setSenha(data) } placeholder= "Senha" placeholderTextColor= "#616161" />
+            <InputForm value={senha} secureTextEntry onChangeText={(data) => setSenha(data) } placeholder= "Senha" placeholderTextColor= "#616161" />
             <InputForm value={nascimento} onChangeText={(data) => setNascimento(data) } placeholder= "Data de nascimento" placeholderTextColor= "#616161" />
             <InputForm value={image} onChangeText={(data) => setImage(data) } placeholder= "Insira a url da sua imagem" placeholderTextColor= "#616161" />
             

@@ -3,29 +3,22 @@ import { Button, Card, Container, Foto, Price, SubTitle, Title } from "./styles"
 import Ionicons from "@expo/vector-icons/Ionicons"
 import { useNavigation } from "@react-navigation/native" 
 import { IdContext } from "../../context/IdContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
-export default function CardsProdutos(props) {
-    const { setId } = useContext(IdContext)
+export default function CardsProdutos({ item }) {
+
     const navigation = useNavigation()
-    
-    function addItem(){
-        const itemId = id;
-        setId()
-        navigation.navigate("DescricaoProduto")
 
-    }
 
     return (
         
-        <Card >
-            <Foto style={{width: "100%", height: 60, marginBottom: 12}} source={{ uri: props.foto }} />
+        <Card key={item.id}>
+            <Foto style={{width: "100%", height: 60, marginBottom: 12}} source={{ uri: item.foto }} />
             <Title>
-                {props.title}
+                {item.nome}
             </Title>
-            <Title>{props.key}</Title>
             <Price>
-                R$ {props.price}
+                R$ {item.preco}
             </Price>
             <View style={{flexDirection: "row", width: "100%"}}>
                 <View style={{flexDirection: "row", marginRight: 10}}>
@@ -38,10 +31,10 @@ export default function CardsProdutos(props) {
                     80 reviews
                 </SubTitle>
             </View>
-                <Button onPress={() => addItem()}
+                <Button onPress={() => navigation.navigate("DescricaoProduto", {id: item.id})}
 >
-                    <Ionicons name="cart-outline" size={16} color= "#0C1A30" />
-                    <Text>Carrinho</Text>
+                    <Ionicons name="caret-forward-outline" size={16} color= "#0C1A30" />
+                    <Text>Detalhes</Text>
 
                 </Button>
         </Card>
