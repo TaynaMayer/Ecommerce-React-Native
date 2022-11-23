@@ -1,10 +1,33 @@
 import React from 'react';
-import { View } from 'react-native';
+import { ContainerProdutos } from '../../components/Global';
+import HeaderProdutos from '../../components/HeaderProdutos/headerProduto';
+import { useEffect, useState } from 'react';
+import { Api } from '../../service/api';
+import { Text } from 'react-native';
+import { IdContext } from '../../context/IdContext';
+import { useContext } from 'react';
+import { useRoute } from '@react-navigation/native';
 
-// import { Container } from './styles';
+const DescricaoProduto = ({ navigation }) => {
 
-const DescricaoProduto = () => {
-  return <View />;
-}
+  const [produtos, setProdutos] = useState([]);
+    const route = useRoute()
+
+    useEffect(() => {
+      Api
+      .get(`/produto/${route.params.id}`)
+      .then((response) => setProdutos(response.data))
+      .catch((err) => {
+        console.error("ops! ocorreu um erro" + err);
+      });
+    }, [route.params.id]);
+
+  return (
+    <ContainerProdutos>
+      <HeaderProdutos />
+      <Text>{produtos.nome}</Text>
+    </ContainerProdutos>
+  );
+};
 
 export default DescricaoProduto;
