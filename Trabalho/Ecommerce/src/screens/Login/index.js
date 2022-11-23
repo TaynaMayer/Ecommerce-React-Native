@@ -50,7 +50,7 @@ export default function Login() {
         <Text style={{ marginBottom: 70, marginTop: 24 }}>MULTI TECH</Text>
         <InputForm value={login} placeholder="Login" placeholderTextColor="#616161"
           style={{ textAlign: "center" }} onChangeText={(data) => setLogin(data)} />
-        <InputForm value={senha} placeholder="Senha" placeholderTextColor="#616161"
+        <InputForm  secureTextEntry value={senha} placeholder="Senha" placeholderTextColor="#616161"
           style={{ textAlign: "center" }} onChangeText={(data) => setSenha(data)}/>
         <Button onPress={() => navigation.navigate("Home") }>
           <Text style={{ color: "white" }}>Entrar</Text>
