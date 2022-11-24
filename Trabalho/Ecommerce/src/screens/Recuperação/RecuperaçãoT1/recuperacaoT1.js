@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { Api } from "../../../service/api";
 import { IdContext } from '../../../context/IdContext';
 import { useContext } from 'react';
+import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
 const RecuperaçãoT1 = () => {
 

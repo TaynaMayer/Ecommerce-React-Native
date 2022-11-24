@@ -7,6 +7,8 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { CartContext } from '../../context/Cart'; 
 import { useContext } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
+
 
 const DescricaoProduto = ({ navigation }) => {
     const { adcionarItemAoCarrinho } = useContext(CartContext)
