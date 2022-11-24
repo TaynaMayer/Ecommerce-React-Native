@@ -9,8 +9,6 @@ import { IdContext } from '../../../context/IdContext';
 import { useContext } from 'react';
 import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
-
-
 const RecuperaçãoT1 = () => {
 
   const { setId } = useContext(IdContext);
@@ -27,15 +25,16 @@ const RecuperaçãoT1 = () => {
     console.log(nome)
 
     Api.get(`/usuario/nome/${nome}`)
-      .then((r) => {
+      .then((response) => {
         
-        setUsuario(r.data)
-        console.log(r.data)
+        console.log(response.data)     
+              
+        navigation.navigate("RecuperaçãoT2",{data: response.data})   
+            
       })
 
-    setId(usuario.id)
+   
   }
-  console.log(usuario.find((u) => u.id))  
 
   return (
     <>
@@ -49,7 +48,7 @@ const RecuperaçãoT1 = () => {
         <InputForm onChangeText={(data) => setNome(data)}
           value={nome}
           placeholder="Digite seu nome completo" placeholderTextColor="#616161" />
-        <Button onPress={() => navigation.navigate("RecuperaçãoT2")}>
+        <Button onPress={validacao}>
           <Text style={{ color: "white" }}>Próximo</Text>
         </Button>
 
