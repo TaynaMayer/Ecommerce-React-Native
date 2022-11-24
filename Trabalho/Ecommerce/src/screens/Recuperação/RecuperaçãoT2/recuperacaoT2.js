@@ -12,33 +12,25 @@ const RecuperaçãoT2 = ({ navigation }) => {
 
   const [senha, setSenha] = useState("");
 
-  const [usuario, setUsuario] = useState([]);
 
 
-  setUsuario(route.params.data)
-  /*useEffect(() => {
-    Api
-      .get(`/usuario/${route.params.data?.id}`)
-      .then((response) => setUsuario(response.data))
-      .catch((err) => {
-        console.error("ops! ocorreu um erro" + err);
-      });
-  }, []);*/
+console.log(route.params.data.id)
+
   const update = () => {
 
     const data = {
-      id: usuario.id,
-      ativo: usuario.ativo,
-      cpf: usuario.cpf,
-      dtNascimento: usuario.nascimento,
-      foto: usuario.image,
-      login: usuario.login,
-      nome: usuario.nome,
+      id: route.params.data.id,
+      ativo: route.params.data.ativo,
+      cpf: route.params.data.cpf,
+      dtNascimento: route.params.data.dtNascimento,
+      foto: route.params.data.foto,
+      login: route.params.data.login,
+      nome: route.params.data.nome,
       senha: senha
     }
 
     Api
-      .put(`/usuario/${usuario.id}`, data)
+      .put(`/usuario/${route.params.data.id}`, data)
       .then((response) => console.log(response.data))
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
