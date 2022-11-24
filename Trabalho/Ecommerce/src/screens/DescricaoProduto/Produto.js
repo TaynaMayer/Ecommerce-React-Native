@@ -3,14 +3,14 @@ import { ContainerProdutos } from '../../components/Global';
 import HeaderProdutos from '../../components/HeaderProdutos/headerProduto';
 import { useEffect, useState } from 'react';
 import { Api } from '../../service/api';
-import { Text } from 'react-native';
-import { IdContext } from '../../context/IdContext';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { CartContext } from '../../context/Cart'; 
 import { useContext } from 'react';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 
 const DescricaoProduto = ({ navigation }) => {
-
-  const [produtos, setProdutos] = useState([]);
+    const { adcionarItemAoCarrinho } = useContext(CartContext)
+    const [produtos, setProdutos] = useState([]);
     const route = useRoute()
 
     useEffect(() => {
@@ -25,7 +25,21 @@ const DescricaoProduto = ({ navigation }) => {
   return (
     <ContainerProdutos>
       <HeaderProdutos />
+
+      <View key={produtos.id}>
       <Text>{produtos.nome}</Text>
+      <TouchableOpacity onPress={() => {
+          adcionarItemAoCarrinho(
+            produtos.id, 
+            produtos.foto, 
+            produtos.nome, 
+            produtos.valor, 
+            produtos.descricao
+          )
+      }}><Text>Carrinho</Text></TouchableOpacity>
+      
+
+      </View>
     </ContainerProdutos>
   );
 };

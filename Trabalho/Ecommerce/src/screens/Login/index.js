@@ -13,6 +13,7 @@ export default function Login() {
     const navigation = useNavigation();
     const [login, setLogin] = useState("")
     const [senha, setSenha] = useState("")
+    const [erro, setErro] = useState("")
     const [validation, setValidation] = useState(false)
 
 
@@ -34,11 +35,6 @@ export default function Login() {
            }).catch((err) => {
             console.log(err)
            });
-        
-           if (validation){  
-            console.log("navegando")
-                      
-           }
     };
     
 
