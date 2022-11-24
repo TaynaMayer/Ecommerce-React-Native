@@ -3,6 +3,7 @@ import { Image, Text, } from 'react-native';
 import { useNavigation } from "@react-navigation/native";
 import { Container, InputForm, Button } from '../../../components/Global';
 import Header from '../../../components/header/header';
+import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
 const RecuperaçãoT2 = () => {
   const navigation = useNavigation();
