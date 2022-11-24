@@ -7,8 +7,7 @@ import { useState, useEffect } from 'react';
 import { Api } from "../../../service/api";
 import { IdContext } from '../../../context/IdContext';
 import { useContext } from 'react';
-
-
+import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
 const RecuperaçãoT1 = () => {
 
@@ -26,15 +25,16 @@ const RecuperaçãoT1 = () => {
     console.log(nome)
 
     Api.get(`/usuario/nome/${nome}`)
-      .then((r) => {
-        
-        setUsuario(r.data)
-        console.log(r.data)
+      .then((response) => {
+
+        console.log(response.data)
+
+        navigation.navigate("RecuperaçãoT2",{data: response.data})
+
       })
 
-    setId(usuario.id)
+
   }
-  console.log(usuario.find((u) => u.id))  
 
   return (
     <>

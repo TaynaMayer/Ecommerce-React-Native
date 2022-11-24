@@ -1,24 +1,17 @@
 import styled from "styled-components/native"
 
 
-export const MenuBurguer = styled.TouchableOpacity`
-
-
-`
 
 
 
 
-export const BoxIcon = styled.View`
 
 
-`
-
-export const Container = styled.View`
+export const ContainerHeader = styled.View`
 
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     margin-bottom: 40; 
 
