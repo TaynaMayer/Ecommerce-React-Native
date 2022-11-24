@@ -4,6 +4,7 @@ import Ionicons from "@expo/vector-icons/Ionicons"
 import { useNavigation } from "@react-navigation/native" 
 import { IdContext } from "../../context/IdContext";
 import { useContext, useState } from "react";
+import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
 export default function CardsProdutos({ item }) {
 
