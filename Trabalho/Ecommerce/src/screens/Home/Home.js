@@ -30,16 +30,16 @@ const Home = () => {
 
       <BoxCards>
           {produto?.map((item) => {
-    
+
             return <CardsProdutos key={item.id} item={item}  />
              })}
       </BoxCards>
    </ContainerProdutos>
-      
-    
-      
-    
-    
+
+
+
+
+
   )
 }
 
