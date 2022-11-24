@@ -7,6 +7,7 @@ import { StatusBar } from "expo-status-bar";
 import { Api } from "../../service/api";
 import { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
 
 export default function Login() {
