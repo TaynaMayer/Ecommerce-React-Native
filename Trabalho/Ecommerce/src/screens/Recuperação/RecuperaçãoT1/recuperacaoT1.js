@@ -26,14 +26,14 @@ const RecuperaçãoT1 = () => {
 
     Api.get(`/usuario/nome/${nome}`)
       .then((response) => {
-        
-        console.log(response.data)     
-              
-        navigation.navigate("RecuperaçãoT2",{data: response.data})   
-            
+
+        console.log(response.data)
+
+        navigation.navigate("RecuperaçãoT2",{data: response.data})
+
       })
 
-   
+
   }
 
   return (
