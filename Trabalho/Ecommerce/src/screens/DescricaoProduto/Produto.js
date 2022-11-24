@@ -9,6 +9,7 @@ import { useContext } from 'react';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
+
 const DescricaoProduto = ({ navigation }) => {
     const { adcionarItemAoCarrinho } = useContext(CartContext)
     const [produtos, setProdutos] = useState([]);
