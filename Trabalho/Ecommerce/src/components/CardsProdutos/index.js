@@ -12,7 +12,7 @@ export default function CardsProdutos({ item }) {
 
 
     return (
-        
+
         <Card key={item.id}>
             <Foto style={{width: "100%", height: 60, marginBottom: 12}} source={{ uri: item.foto }} />
             <Title>
@@ -39,9 +39,9 @@ export default function CardsProdutos({ item }) {
 
                 </Button>
         </Card>
-        
 
-   
+
+
     )
 
 }
