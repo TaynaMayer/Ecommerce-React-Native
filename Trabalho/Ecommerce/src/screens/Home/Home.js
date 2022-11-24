@@ -3,15 +3,16 @@ import { View, FlatList, Text } from 'react-native';
 import { useEffect } from 'react';
 import { Api } from "../../service/api";
 import CardsProdutos from '../../components/CardsProdutos';
-import { Container } from '../../components/Global';
+import {ContainerProdutos } from '../../components/Global';
 import HeaderProdutos from '../../components/headerProdutos/headerProduto';
 import { BoxCards } from './styles';
+import { IdContext } from '../../context/IdContext';
+import { useContext } from 'react';
+
 
 const Home = () => {
 
   const [produto, setProduto] = useState([])
-
-
 
   useEffect(() => {
     Api
@@ -24,18 +25,21 @@ const Home = () => {
 
   return (
 
-   <Container>
+   <ContainerProdutos>
       <HeaderProdutos/>
 
       <BoxCards>
-          {produto?.map((item) => <CardsProdutos key={item.id} title= {item.nome} price= {item.preco} foto= {item.foto}/>)}
+          {produto?.map((item) => {
+
+            return <CardsProdutos key={item.id} item={item}  />
+             })}
       </BoxCards>
-   </Container>
-      
-    
-      
-    
-    
+   </ContainerProdutos>
+
+
+
+
+
   )
 }
 

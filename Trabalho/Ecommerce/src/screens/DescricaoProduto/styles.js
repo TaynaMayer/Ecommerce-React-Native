@@ -1,17 +1,4 @@
 import styled from "styled-components/native";
-import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
-
-export const Card = styled.View`
-  
-    padding: 12px 15px;
-    background-color: #F5F5F5;
-    border-radius: 25px; 
-    width: 40%;
-    height: 231px;
-    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
-    align-items: center;
-  
-`
 
 
 export const Foto = styled.Image`    
@@ -22,35 +9,40 @@ export const Foto = styled.Image`
 
 export const Title = styled.Text`
   
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;    
     line-height: 18px;
     letter-spacing: 0.2px;
     color: #0C1A30;
-    text-align: left;
+    text-align: center;
     width: 100%;
+    margin-bottom: 25px;
+    margin-top: 40px;
+    
 
 `
 
 export const Price = styled.Text`
 
     font-weight: 700;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 16px;
     letter-spacing: 0.2px;
     color: #570909;
-    text-align: left;
+    text-align: center;
     width: 100%;
-    margin-bottom: 6px;
+    margin-bottom: 35px;
+    margin-top: 20px;
 
 `
 export const SubTitle = styled.Text`
 
     font-weight: 400;
-    font-size: 10px;
+    font-size: 15px;
     line-height: 13px;
     letter-spacing: 0.2px;
     color: #0C1A30;
+    margin-bottom: 15px;
 
 `
 

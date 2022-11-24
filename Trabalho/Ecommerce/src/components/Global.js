@@ -1,4 +1,5 @@
 import styled from "styled-components/native"
+import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
 
 export const Container = styled.View`
 
@@ -9,6 +10,17 @@ export const Container = styled.View`
     background-color: #ffffff;
 
 
+`
+
+
+export const ContainerProdutos = styled.View`
+
+
+    flex: 1;
+    width: 100%;
+    padding: 40px 0;
+    align-items: center;
+    background-color: #ffffff;
 `
 
 export const Title = styled.Text`
