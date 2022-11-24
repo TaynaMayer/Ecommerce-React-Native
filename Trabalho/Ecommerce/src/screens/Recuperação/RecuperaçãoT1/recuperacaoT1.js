@@ -11,8 +11,6 @@ import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@e
 
 const RecuperaçãoT1 = () => {
 
-  const { setId } = useContext(IdContext);
-
   const navigation = useNavigation();
 
   const [nome, setNome] = useState("");
@@ -27,12 +25,15 @@ const RecuperaçãoT1 = () => {
     Api.get(`/usuario/nome/${nome}`)
       .then((response) => {
 
-        console.log(response.data)
+        if(response.data.length > 0) {
 
-        navigation.navigate("RecuperaçãoT2",{data: response.data})
-
+          setUsuario(response.data)
+          
+          navigation.navigate("RecuperaçãoT2",{data: response.data[0]})
+        } else {
+          console.log("fodase")
+        }
       })
-
 
   }
 
@@ -48,7 +49,7 @@ const RecuperaçãoT1 = () => {
         <InputForm onChangeText={(data) => setNome(data)}
           value={nome}
           placeholder="Digite seu nome completo" placeholderTextColor="#616161" />
-        <Button onPress={() => navigation.navigate("RecuperaçãoT2")}>
+        <Button onPress={validacao}>
           <Text style={{ color: "white" }}>Próximo</Text>
         </Button>
 
