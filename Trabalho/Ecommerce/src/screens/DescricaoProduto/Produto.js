@@ -1,8 +1,8 @@
 import React from 'react';
 import { ContainerProdutos } from '../../components/Global';
-import HeaderProdutos from '../../components/HeaderProdutos/headerProduto';
 import { useEffect, useState } from 'react';
 import { Api } from '../../service/api';
+import HeaderProdutos from '../../components/headerProdutos/headerProduto.js';
 import { Text, Image } from 'react-native';
 import { useContext } from 'react';
 import { useRoute } from '@react-navigation/native';
