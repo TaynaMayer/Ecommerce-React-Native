@@ -17,8 +17,10 @@ const HeaderProdutos = (props) => {
       {props.foto ? ( <Image style={{width: 30, height: 30}} source={{uri: props.foto}}></Image>) : (<Ionicons name="person-circle-outline" size={28} color="#690A0A" onPress={() => navigation.navigate("Login")} />)}
        
         
+      <TouchableOpacity onPress={() => navigation.navigate("Home")}>
 
-      <Image style={{ width: 50, height: 50 }} source={require("../../../assets/logo.png")} />
+      <Image  style={{ width: 50, height: 50 }} source={require("../../../assets/logo.png")} />
+      </TouchableOpacity>
 
 
       <TouchableOpacity onPress={() => navigation.navigate("Carrinho")}>
