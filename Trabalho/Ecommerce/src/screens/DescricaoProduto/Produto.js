@@ -32,10 +32,8 @@ const DescricaoProduto = ({ navigation }) => {
 
       <View style={{alignItems: "center"}}>
 
-          <Title>
-                  {produto.nome}
-              </Title>
-          <Image style={{width: 200, height: 200}} source={{ uri: produto.foto }} />
+          <Title>{produto.nome}</Title>
+          <Image style={{width: 260, height: 200}} source={{ uri: produto.foto }} />
               
               <Price>
                   R$ {produto.preco},00

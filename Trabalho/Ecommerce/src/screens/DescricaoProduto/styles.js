@@ -1,12 +1,6 @@
 import styled from "styled-components/native";
 
 
-export const Foto = styled.Image`    
-
-    
-
-`
-
 export const Title = styled.Text`
   
     font-size: 20px;
@@ -43,6 +37,8 @@ export const SubTitle = styled.Text`
     letter-spacing: 0.2px;
     color: #0C1A30;
     margin-bottom: 15px;
+    width: 300px;
+    text-align: center;
 
 `
 

@@ -7,15 +7,16 @@ import Ionicons from "@expo/vector-icons/Ionicons"
 import { useNavigation } from '@react-navigation/native';
 
 
-const HeaderProdutos = () => {
+const HeaderProdutos = (props) => {
   const navigation = useNavigation();
   const { produtos } = useContext(CartContext)
 
-
+  
   return (
     <ContainerHeader>
-      
-        <Ionicons name="menu-outline" size={28} color="#690A0A" onPress={() => navigation.navigate("Login")} />
+      {props.foto ? ( <Image style={{width: 30, height: 30}} source={{uri: props.foto}}></Image>) : (<Ionicons name="person-circle-outline" size={28} color="#690A0A" onPress={() => navigation.navigate("Login")} />)}
+       
+        
 
       <Image style={{ width: 50, height: 50 }} source={require("../../../assets/logo.png")} />
 
