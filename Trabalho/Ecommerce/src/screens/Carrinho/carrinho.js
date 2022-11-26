@@ -58,7 +58,7 @@ const Carrinho = () => {
               </TouchableOpacity>
 
               </View>
-              <Text  style={{color: "#690A0A", fontSize: 20, position: 'absolute', bottom: 100, right: -22}}>X</Text>
+              <Text onPress={() => deleteItem(prod.id)} style={{color: "#690A0A", fontSize: 20, position: 'absolute', bottom: 100, right: -22}}>X</Text>
               </View>
             </Card>
           )
