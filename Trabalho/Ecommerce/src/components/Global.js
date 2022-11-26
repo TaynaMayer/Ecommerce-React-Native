@@ -13,13 +13,12 @@ export const Container = styled.View`
 `
 
 
-export const ContainerProdutos = styled.View`
+export const ContainerProdutos = styled.ScrollView`
 
 
     flex: 1;
     width: 100%;
     padding: 40px 0;
-    align-items: center;
     background-color: #ffffff;
 `
 

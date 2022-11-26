@@ -15,7 +15,7 @@ const HeaderProdutos = () => {
   return (
     <ContainerHeader>
       
-        <Ionicons name="menu-outline" size={28} color="#690A0A" />
+        <Ionicons name="menu-outline" size={28} color="#690A0A" onPress={() => navigation.navigate("Login")} />
 
       <Image style={{ width: 50, height: 50 }} source={require("../../../assets/logo.png")} />
 

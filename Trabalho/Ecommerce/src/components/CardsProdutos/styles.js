@@ -9,6 +9,7 @@ export const Card = styled.View`
     height: 231px;
     box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
     align-items: center;
+    margin-bottom: 54px;
   
 `
 
