@@ -4,7 +4,7 @@ export const CartContext = createContext({});
 
 export const CartProvider = ({ children }) => {
     const [produtos, setProdutos] = useState([])
-    function adcionarItemAoCarrinho(id, foto, nome, valor, descricao) {
+    function adcionarItemAoCarrinho(id, foto, nome, valor) {
 
         const item = [...produtos]
         const itemFiltrado = item.find((prod) => prod.id === id)
@@ -15,12 +15,11 @@ export const CartProvider = ({ children }) => {
                 foto: foto,
                 nome: nome,
                 valor: valor,
-                descricao: descricao,
                 quantidade: 1
             })
 
         } else {
-            item.quantidade = item.quantidade + 1
+            itemFiltrado.quantidade = itemFiltrado.quantidade + 1
         }
         setProdutos(item)
     }

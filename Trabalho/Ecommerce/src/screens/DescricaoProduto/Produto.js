@@ -46,7 +46,6 @@ const DescricaoProduto = ({ navigation }) => {
             produto.foto, 
             produto.nome, 
             produto.valor, 
-            produto.descricao
           )}
   >
                       <Ionicons name="cart-outline" size={16} color= "#0C1A30" />
