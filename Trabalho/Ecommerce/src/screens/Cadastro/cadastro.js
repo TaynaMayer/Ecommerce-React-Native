@@ -19,6 +19,7 @@ export default function Cadastro() {
     const [nome, setNome] = useState("")
     const [senha, setSenha] = useState("")
     const [image, setImage] = useState("")
+    const [erro, setErro] = useState("")
 
    /* async () => {
         if(Platform.OS !== "web") {
@@ -57,6 +58,9 @@ export default function Cadastro() {
           
         Api.post("/usuario", data)
            .then((res) => {
+            if(nome === "", login === "", cpf === "", senha === "", nascimento === "", image === "")  {
+                setErro("Preencha os campos corretamente")
+            }
             console.log(res.data)
            }).catch((err) => {
             console.log(err)
@@ -77,6 +81,8 @@ export default function Cadastro() {
             <InputForm value={senha} secureTextEntry onChangeText={(data) => setSenha(data) } placeholder= "Senha" placeholderTextColor= "#616161" />
             <InputForm value={nascimento} onChangeText={(data) => setNascimento(data) } placeholder= "Data de nascimento" placeholderTextColor= "#616161" />
             <InputForm value={image} onChangeText={(data) => setImage(data) } placeholder= "Insira a url da sua imagem" placeholderTextColor= "#616161" />
+
+            {erro.length > 0 && (<Text style={{color: "red", marginBottom: 20}}>{erro}</Text>)}
             
             <Button onPress={() => addPost()}>
              <Text style= {{color: "white"}}>Cadastrar</Text>

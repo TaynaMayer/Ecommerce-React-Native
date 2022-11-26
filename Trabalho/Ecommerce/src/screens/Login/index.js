@@ -15,7 +15,7 @@ export default function Login() {
     const [login, setLogin] = useState("")
     const [senha, setSenha] = useState("")
     const [erro, setErro] = useState("")
-    const [validation, setValidation] = useState(false)
+    const [validation, setValidation] = useState(true)
 
 
     const logar = () => {
@@ -26,13 +26,13 @@ export default function Login() {
            .then((res) => {
             if(res.data !== "Login e/ou senha inválidos.") {
                 setValidation(true)
-                navigation.navigate("Home")  
+                navigation.navigate("Home", {login: login,senha:senha})  
                 console.log("logou")              
-            }
-            else{
+            } else if(res.data === "Login e/ou senha inválidos.") {
+              setErro(res.data)
+            } else {
               setValidation(false)
-              alert("errou") 
-            }    
+            }  
            }).catch((err) => {
             console.log(err)
            });
@@ -52,11 +52,13 @@ export default function Login() {
           style={{ textAlign: "center" }} onChangeText={(data) => setLogin(data)} />
         <InputForm  secureTextEntry value={senha} placeholder="Senha" placeholderTextColor="#616161"
           style={{ textAlign: "center" }} onChangeText={(data) => setSenha(data)}/>
+
+          {erro.length > 0 && (<Text style={{marginBottom: 20, color: "red"}}>{erro}</Text>)}
         <Button onPress={logar}>
           <Text style={{ color: "white" }}>Entrar</Text>
         </Button>
 
-        <Text onPress={() => navigation.navigate("RecuperaçãoT1")}>Esqueci minha senha</Text>
+        <Text onPress={() => navigation.navigate("RecuperaçãoT1")} style={{marginBottom: 61, marginTop: 19}}>Esqueci minha senha</Text>
         
         <Text onPress={() => navigation.navigate("Cadastro")}>Ainda não sou cadastrado</Text>
        

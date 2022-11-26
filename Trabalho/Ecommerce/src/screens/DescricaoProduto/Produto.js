@@ -3,7 +3,7 @@ import { ContainerProdutos } from '../../components/Global';
 import { useEffect, useState } from 'react';
 import { Api } from '../../service/api';
 import HeaderProdutos from '../../components/headerProdutos/headerProduto.js';
-import { Text, Image } from 'react-native';
+import { Text, Image, View } from 'react-native';
 import { useContext } from 'react';
 import { useRoute } from '@react-navigation/native';
 import { Button, Price, SubTitle, Title } from "./styles";
@@ -29,14 +29,16 @@ const DescricaoProduto = ({ navigation }) => {
   
   <ContainerProdutos>
       <HeaderProdutos/>
-        
+
+      <View style={{alignItems: "center"}}>
+
           <Title>
                   {produto.nome}
               </Title>
-          <Image style={{width: "80%", height: 250, marginBottom: 12}} source={{ uri: produto.foto }} />
+          <Image style={{width: 200, height: 200}} source={{ uri: produto.foto }} />
               
               <Price>
-                  R$ {produto.preco}
+                  R$ {produto.preco},00
               </Price>
               <SubTitle>
                 {produto.descricao}
@@ -49,10 +51,12 @@ const DescricaoProduto = ({ navigation }) => {
             produto.descricao
           )}
   >
-                      <Ionicons name="caret-forward-outline" size={16} color= "#0C1A30" />
+                      <Ionicons name="cart-outline" size={16} color= "#0C1A30" />
                       <Text>Adicionar ao Carrinho</Text>
 
                   </Button>
+      </View>
+        
                      
      </ContainerProdutos>
   );
