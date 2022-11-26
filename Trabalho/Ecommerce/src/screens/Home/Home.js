@@ -48,7 +48,7 @@ const Home = ({navigation}) => {
   return (
 
    <ContainerProdutos>
-      <HeaderProdutos/>
+      <HeaderProdutos foto={usuario.foto}/>
 
       {route.params ? (<Text style={{alignSelf: "center", textAlign: "center",  width: 200}}>Olá {usuario.nome}</Text>) : (<Text style={{alignSelf: "center", textAlign: "center", width: 200}}  >Por favor, cadastre-se para poder ter melhor navegação em nosso site</Text>) }
   
