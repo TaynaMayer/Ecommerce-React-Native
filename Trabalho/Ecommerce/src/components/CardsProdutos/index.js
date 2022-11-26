@@ -14,7 +14,7 @@ export default function CardsProdutos({ item }) {
     return (
 
         <Card key={item.id}>
-            <Foto style={{width: "80%", height: 80, marginBottom: 12}} source={{ uri: item.foto }} />
+            <Foto style={{width: "100%", height: 80, marginBottom: 12}} source={{ uri: item.foto }} />
             <Title>
                 {item.nome.substring(0, 10)}...
             </Title>
