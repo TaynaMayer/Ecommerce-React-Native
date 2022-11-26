@@ -1,5 +1,5 @@
 import styled from "styled-components/native"
-import { useFonts, DMSans_400Regular, DMSans_500Medium, DMSans_700Bold} from "@expo-google-fonts/dm-sans";
+
 
 export const Container = styled.View`
 
@@ -25,7 +25,7 @@ export const ContainerProdutos = styled.View`
 
 export const Title = styled.Text`
 
-    font-family: 'DM Sans';
+    
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
